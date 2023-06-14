@@ -6,7 +6,7 @@ function App() {
     <div className="app">
       {/* @ts-ignore */}
       <dbn-dashboard
-        token="f2834487-d196-463c-9a57-9e02f78c7dda"
+        token="e0945419-7c0f-4390-9c0c-4c9ffcb4f735"
         dashboardId="dev-orders"
       />
     </div>
