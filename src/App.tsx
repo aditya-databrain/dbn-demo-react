@@ -1,16 +1,20 @@
-import "dbn-ui-test-1/web";
+import "@databrainhq/plugin/web";
 import "./App.css";
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      "dbn-dashboard": any;
+      "dbn-metric": any;
+    }
+  }
+}
+
 function App() {
-  return (
-    <div className="app">
-      {/* @ts-ignore */}
-      <dbn-dashboard
-        token="e0945419-7c0f-4390-9c0c-4c9ffcb4f735"
-        dashboardId="dev-orders"
-      />
-    </div>
-  );
+  const url = new URL(location.href);
+  const token = url.searchParams.get("token");
+  const dashboardId = url.searchParams.get("dashboardId");
+  return <dbn-dashboard token={token} dashboardId={dashboardId} />;
 }
 
 export default App;
