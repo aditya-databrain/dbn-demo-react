@@ -14,7 +14,7 @@ function App() {
   const url = new URL(location.href);
   const token = url.searchParams.get("token");
   const dashboardId = url.searchParams.get("dashboardId");
-  return <dbn-dashboard token={token} dashboardId={dashboardId} />;
+  return <dbn-dashboard token={token} dashboard-id={dashboardId} />;
 }
 
 export default App;
